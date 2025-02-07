@@ -1,5 +1,5 @@
 .botao {
-  color: #332200;
+  color: var(--cor-p5);
   background: linear-gradient(#ffbf00, #f2a50c);
   padding: 16px 32px;
   display: inline-block;
