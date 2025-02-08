@@ -54,3 +54,31 @@
   object-fit: cover;
   object-position: left;
 }
+
+@media (max-width: 800px) {
+  .tecnologia-bg {
+    box-shadow: initial;
+  }
+
+  .tecnologia {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia-conteudo {
+    padding: 60px 0;
+  }
+
+  .tecnologia-conteudo a {
+    margin-bottom: 60px;
+  }
+
+  .tecnologia-imagem {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .tecnologia-vantagens {
+    flex-direction: column;
+  }
+}
