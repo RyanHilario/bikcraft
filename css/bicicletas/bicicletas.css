@@ -1,0 +1,71 @@
+.bicicletas-bg {
+  background: linear-gradient(90deg, var(--cor-0) 30%, var(--cor-11) 30%);
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.bicicletas-imagem {
+  position: relative;
+}
+
+.bicicletas-imagem span {
+  background: var(--cor-12);
+  display: inline-block;
+  padding: 8px;
+  padding-right: 16px;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.bicicletas-conteudo h2,
+.bicicletas-conteudo p {
+  grid-column: 1 / -1;
+}
+
+.bicicletas-conteudo h2 {
+  margin-bottom: 20px;
+}
+
+.bicicletas-conteudo h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background: var(--cor-p1);
+  margin-bottom: 8px;
+}
+
+.bicicletas-conteudo p {
+  font-weight: 400;
+  margin-bottom: 32px;
+  max-width: 70ch;
+}
+
+.bicicletas-conteudo li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bicicletas-conteudo img {
+  width: 24px;
+  height: 24px;
+}
+
+.bicicletas-conteudo a {
+  place-self: end;
+}
