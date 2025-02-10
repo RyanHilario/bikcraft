@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 60px 0;
+  padding-block: 60px 0;
 }
 
 .bicicletas-imagem {
@@ -74,7 +74,7 @@
   .bicicletas {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 40px 20px;
+    padding-block: 40px;
   }
 
   .bicicletas-bg {

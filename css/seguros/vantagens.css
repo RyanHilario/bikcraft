@@ -3,7 +3,7 @@
 }
 
 .vantagens {
-  padding: 120px 0;
+  padding-block: 120px;
 }
 
 .vantagens h2 {
@@ -12,11 +12,25 @@
 
 .vantagens ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
   gap: 40px 80px;
 }
 
 .vantagens h3,
 .vantagens img {
   margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .vantagens {
+    padding-block: 60px;
+  }
+
+  .vantagens h2 {
+    margin-bottom: 40px;
+  }
+
+  .vantagens ul {
+    gap: 20px;
+  }
 }

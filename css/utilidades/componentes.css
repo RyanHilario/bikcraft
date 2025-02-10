@@ -81,7 +81,7 @@
 /*  titulo internas */
 .titulo-bg {
   background: var(--cor-11);
-  padding: 60px 0;
+  padding-block: 60px;
 }
 
 .titulo > p {
