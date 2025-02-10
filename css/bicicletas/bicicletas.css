@@ -1,5 +1,5 @@
 .bicicletas-bg {
-  background: linear-gradient(90deg, var(--cor-0) 30%, var(--cor-11) 30%);
+  background: linear-gradient(90deg, var(--cor-0) 30%, var(--cor-11) 0);
 }
 
 .bicicletas {
@@ -27,7 +27,7 @@
 .bicicletas-conteudo {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-content: start;
 }
 
 .bicicletas-conteudo h2,
@@ -68,4 +68,36 @@
 
 .bicicletas-conteudo a {
   place-self: end;
+}
+
+@media (max-width: 800px) {
+  .bicicletas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .bicicletas-bg {
+    background: var(--cor-11);
+  }
+}
+
+@media (max-width: 600px) {
+  .bicicletas-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .bicicletas-conteudo ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 24px;
+  }
+
+  .bicicletas-conteudo li {
+    font-size: 1rem;
+  }
+
+  .bicicletas-conteudo a {
+    place-self: start;
+  }
 }
