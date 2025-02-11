@@ -26,3 +26,19 @@
 .bicicleta-seguro-conteudo p {
   margin-bottom: 20px;
 }
+
+@media (max-width: 800px) {
+  .bicicleta-seguro {
+    grid-template-columns: 1fr;
+  }
+
+  .bicicleta-seguro-bg {
+    box-shadow: initial, inset 0 -60px 0 var(--cor-12);
+  }
+
+  .bicicleta-seguro-conteudo {
+    grid-row: 1;
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+}
