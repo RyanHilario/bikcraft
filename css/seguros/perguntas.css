@@ -50,3 +50,13 @@
   padding-top: 16px;
   max-width: 80ch;
 }
+
+@media (max-width: 800px) {
+  .perguntas {
+    padding-block: 40px;
+  }
+
+  .perguntas h2 {
+    margin-bottom: 40px;
+  }
+}
