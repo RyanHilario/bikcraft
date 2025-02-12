@@ -144,12 +144,23 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" id="cidade" name="cidade">
                 </div>
-                <div>
+                <div class="select-container">
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado">
+                    <select class="select" id="estado" name="estado" required>
+                        <option value="" disabled hidden selected>Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </select>
                 </div>
 
-                <button class="botao col-2" href="">SOLICITAR ORÇAMENTO</button>
+                <div class="orcamento-aceito col-2">
+                    <input type="checkbox" id="aceito" name="aceito">
+                    <label for="aceito">
+                        <p>Li e aceito os <a href="./termos.html">termos e condições</a>.</p>
+                    </label>
+                </div>
+
+                <button class="botao col-2" href="">Solicitar orçamento</button>
             </div>
         </form>
     </main>

@@ -152,3 +152,73 @@
   border-radius: 0 4px 4px 0;
   background: var(--cor-0);
 }
+
+.orcamento-aceito {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 8px;
+}
+
+.orcamento-aceito input {
+  display: none;
+}
+
+.orcamento-aceito label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orcamento-aceito label::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--cor-4);
+  border-radius: 4px;
+  background: var(--cor-1);
+}
+
+.orcamento-aceito input:checked + label::before {
+  content: "";
+  display: flex;
+  gap: 0;
+  align-items: center;
+  text-align: center;
+  font-size: 32px;
+  background: url("../../img/icones/lista.svg") no-repeat center;
+  background-color: var(--cor-1);
+  background-size: 32px 30px;
+}
+
+.orcamento-aceito a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .orcamento-produto,
+  .orcamento-dados {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .orcamento {
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+  }
+
+  .orcamento-produto {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .orcamento-dados {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .orcamento-produto {
+    grid-template-columns: 1fr;
+  }
+}

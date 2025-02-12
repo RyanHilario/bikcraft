@@ -17,6 +17,7 @@
 
 .form input[type="text"],
 .form input[type="email"],
+.form .select,
 .form textarea {
   font: 400 1rem/1.5 "Roboto", sans-serif;
   background: var(--cor-1);
@@ -29,11 +30,53 @@
 
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
+.form .select:focus,
 .form textarea:focus {
   outline: none;
   border-color: var(--cor-p1);
   background: var(--cor-0);
   box-shadow: 0 0 0 2px #fea;
+}
+
+.form .select-container {
+  position: relative;
+  pointer-events: none;
+}
+
+.form .select-container::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  background: url("../../img/icones/seta-abrir.svg");
+  transform: rotate(180deg);
+  position: absolute;
+  top: 50px;
+  right: 14px;
+  transition: transform 0.3s;
+}
+
+.form .select-container:has(.select:focus)::after {
+  transform: rotate(0deg);
+}
+
+.form .select {
+  appearance: none; /* Remove a aparência padrão do select */
+  -webkit-appearance: none; /* Para navegadores WebKit (Chrome, Safari) */
+  -moz-appearance: none;
+  pointer-events: initial;
+}
+
+.form .select:invalid {
+  color: var(--cor-7);
+}
+
+.form .select option {
+  color: var(--cor-11);
+}
+
+.form .select option:checked {
+  background: var(--cor-p1);
 }
 
 @media (max-width: 600px) {
