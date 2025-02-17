@@ -40,3 +40,22 @@ function eventosPerguntas(pergunta) {
 }
 
 perguntas.forEach(eventosPerguntas);
+
+// trocar imagem principal na bicicletas internas
+const galeria = document.querySelector(".bicicleta-imagens");
+const bicicletas = document.querySelectorAll(".bicicleta-imagens img");
+
+function trocarImagem(evento) {
+  const img = evento.currentTarget;
+  const media = matchMedia("(min-width: 1000px)").matches;
+
+  if (media) {
+    galeria.prepend(img);
+  }
+}
+
+function eventosGaleria(img) {
+  img.addEventListener("click", trocarImagem);
+}
+
+bicicletas.forEach(eventosGaleria);
