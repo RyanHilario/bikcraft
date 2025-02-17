@@ -59,3 +59,8 @@ function eventosGaleria(img) {
 }
 
 bicicletas.forEach(eventosGaleria);
+
+// Animação simple anime (plugin)
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
